@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('/images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--violet);
+    grid-template-areas: "header"
+                         "hero"
+                         "footer";
+}
+
+.header {
+    grid-area: header;
+    margin: 65px 0 105px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.hero {
+    grid-area: hero;
+    display: flex;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.hero img {
+    height: 506px;
+    width: auto;
+}
+
+.hero div {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-left: 60px;
+    width: 512px;
+}
+
+.hero div h1 {
+    font-family: var(--heading-font-family);
+    font-weight: 600;
+    font-size: 40px;
+    margin: 50px 0 10px 0;
+}
+
+.hero div p {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 30px;
+    letter-spacing: .5px;
+}
+
+.hero div button {
+    color: var(--violet);
+    font-family: var(--heading-font-family);
+    font-weight: 400;
+    font-size: 18px;
+    background-color: #fff;
+    height: 56px;
+    width: 200px;
+    border-radius: 28px;
+    margin: 10px 0;
+    box-shadow: rgba(0, 0, 0, .3) 5px 5px 15px;
+    transition: .3s;
+}
+
+.hero div button:hover {
+    background-color: var(--soft-magenta);
+    color: #fff;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: auto 80px 65px 0;
+}
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: #fff 1px solid;
+    margin: 0 8px;
+    transition: .3s;
+}
+
+.footer div i {
+    color: #fff;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.footer div:hover {
+    border-color: var(--pink);
+}
+
+.footer div:hover i {
+    color: var(--pink);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+}
+
+.attribution a {
+    color: #FCA984;
+}
+
+@media (max-width: 1439px) {
+
+    .hero img {
+        height: 379.5px;
+        width: auto;
+    }
+}
+
+
+
+@media (max-width: 1250px) {
+
+    body {
+        grid-template-rows: 3fr 9fr 2fr;
+    }
+
+    .header {
+        margin-bottom: auto;
+    }
+
+    .hero {
+        margin: 0 80px;
+        align-items: center;
+    }
+
+    .hero div h1 {
+        font-size: 30px;
+    }
+
+    .footer {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+@media (max-width: 1023px) {
+
+    body {
+        background-image: url(/images/bg-mobile.svg);
+        background-size: 100vw;
+        background-position-y: 0;
+    }
+
+    .header {
+        margin-top: 28px;
+        margin-bottom: 51px;
+        margin-left: 10%;
+    }
+
+    .header img {
+        width: 33.3%;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .hero img {
+        width: 80%;
+        height: auto;
+        max-width: 610px
+    }
+
+    .hero div {
+        margin: 0;
+        align-items: center;
+        width: 80%;
+        max-width: 610px;
+    }
+
+    .hero div h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .hero div p {
+        text-align: center;
+    }
+
+    .footer {
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+
+
+@media (max-width: 550px) {
+
+    body {
+        grid-template-rows: 2fr 9fr 3fr;
+    }
+
+    .header {
+        margin-top: 35px;
+    }
+
+    .hero div h1 {
+        font-size: 24px;
+    }
+
+    .hero div p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .hero div button {
+        font-size: 14px;
+        height: 40px;
+        padding-top: 2px;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, .2) 3px 3px 5px;
+    }
+
+    .footer div {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer div i {
+        font-size: 14px;
+    }
+}
